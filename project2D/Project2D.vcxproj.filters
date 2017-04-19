@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Matrix.cpp">
+      <UniqueIdentifier>{57dca8e1-ff7d-4c80-a94b-6505f9ec208e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vector.cpp">
+      <UniqueIdentifier>{75c8cf77-ae28-4a70-a869-ebf5dde36ee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Matrix.h">
+      <UniqueIdentifier>{53fe98e6-3cbe-42a8-a0ed-19afd36877b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Matrix.h\Vector.h">
+      <UniqueIdentifier>{c8a7f541-ecdf-4d8c-bdbf-a19e51ec0e22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application2D.cpp">
