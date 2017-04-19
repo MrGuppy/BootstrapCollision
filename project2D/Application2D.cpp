@@ -18,11 +18,9 @@ bool Application2D::startup()
 {
 	m_2dRenderer = new Renderer2D();
 
-	m_shipTexture = new Texture("./textures/crabby.png");
+	//m_font = new Font("./font/consolas.ttf", 32);
 
-	m_font = new Font("./font/consolas.ttf", 32);
-
-	m_audio = new Audio("./audio/powerup.wav");
+	//m_audio = new Audio("./audio/powerup.wav");
 
 	m_cameraX = 0;
 	m_cameraY = 0;
@@ -33,8 +31,8 @@ bool Application2D::startup()
 
 void Application2D::shutdown() 
 {
-	delete m_audio;
-	delete m_font;
+	//delete m_audio;
+	//delete m_font;
 	delete m_shipTexture;
 	delete m_2dRenderer;
 }

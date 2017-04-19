@@ -1,5 +1,6 @@
 #pragma once
-#include "Entity.h
+#include "Entity.h"
+
 class Player : public Entity
 {
 public:
@@ -9,6 +10,6 @@ public:
 	Player();
 	~Player();
 protected:
-	Player* crab
+	Player* crab;
 };
 

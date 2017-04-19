@@ -3,20 +3,26 @@
 
 Entity::Entity()
 {
+
 }
 
 Entity::~Entity()
 {
 }
 
-void Entity::createParent()
+void Entity::updateTransform()
 {
 
 }
 
-void Entity::createChild()
+void Entity::createParent(Entity* Parent)
 {
+	Parent = m_parent;
+}
 
+void Entity::createChild(Entity* Child)
+{
+	m_child.push_back(Child);
 }
 
 void Entity::update()
