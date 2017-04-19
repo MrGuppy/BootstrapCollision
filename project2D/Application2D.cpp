@@ -2,6 +2,7 @@
 #include "Texture.h"
 #include "Font.h"
 #include "Input.h"
+#include "Player.h"
 
 using namespace aie;
 
@@ -17,7 +18,7 @@ bool Application2D::startup()
 {
 	m_2dRenderer = new Renderer2D();
 
-	m_shipTexture = new Texture("./textures/ship.png");
+	m_shipTexture = new Texture("./textures/crabby.png");
 
 	m_font = new Font("./font/consolas.ttf", 32);
 
@@ -40,6 +41,7 @@ void Application2D::shutdown()
 
 void Application2D::update(float deltaTime) 
 {
+
 	m_timer += deltaTime;
 
 	// input example
