@@ -4,12 +4,17 @@
 class Player : public Entity
 {
 public:
-	void update();
-	void draw();
-
 	Player();
 	~Player();
-protected:
-	Player* crab;
+
+	void update(float deltaTime);
+	void draw(aie::Renderer2D* m_2dRenderer);
+
+
+private:
+	//initializing Vectors 
+	float speed;
+	Vector2 velocity;
+	Vector2 dir;
 };
 

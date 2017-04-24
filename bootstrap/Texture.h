@@ -30,6 +30,7 @@ public:
 	const std::string& getFilename() const { return m_filename; }
 
 	// returns the opengl texture handle
+
 	unsigned int getHandle() const { return m_glHandle; }
 
 	unsigned int getWidth() const { return m_width; }
