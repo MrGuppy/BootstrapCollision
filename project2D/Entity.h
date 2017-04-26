@@ -29,11 +29,11 @@ protected:
 
 	Entity* m_parent;
 
-	aie::Texture* m_crabTexture;
+	aie::Texture* m_shipTexture;
 
 	std::vector<Entity*> m_child; 
 
-	Vector2 Pos;
+	
 
 	Matrix3 m_localMatrix;  //local matrix
 	Matrix3 m_globalMatrix; //global matrix

@@ -1,9 +1,2 @@
-﻿  Vector4.cpp
-  Vector3.cpp
-  Vector2.cpp
-  Player.cpp
-  Matrix4.cpp
-  Matrix3.cpp
-  Matrix2.cpp
-  Generating Code...
+﻿  Player.cpp
   Project2D.vcxproj -> C:\Users\s171736\Documents\GitHub\BootstrapCollision\temp\Project2D\Debug\Project2D.exe

@@ -23,7 +23,7 @@ protected:
 
 	aie::Font*			m_font;
 	aie::Audio*			m_audio;
-	Player* m_crab;
+	Player*				m_ship;
 	float m_cameraX, m_cameraY;
 	float m_timer;
 };

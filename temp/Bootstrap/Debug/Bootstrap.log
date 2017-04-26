@@ -10,7 +10,6 @@
   imgui_draw.cpp
   imgui.cpp
   Generating Code...
-cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
   gl_core_4_4.c
 libsndfile-1.lib(libsndfile-1.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 libsndfile-1.lib(libsndfile-1.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library

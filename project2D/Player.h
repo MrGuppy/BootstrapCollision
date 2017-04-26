@@ -14,7 +14,13 @@ public:
 private:
 	//initializing Vectors 
 	float speed;
+	float rotateSpeed; 
+	float pullBack;
+	float mass;
+
 	Vector2 velocity;
 	Vector2 dir;
+	Player* player;
+
 };
 

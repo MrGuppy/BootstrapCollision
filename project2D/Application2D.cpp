@@ -17,10 +17,10 @@ Application2D::~Application2D()
 bool Application2D::startup() 
 {
 	m_2dRenderer = new Renderer2D();
-	m_crab = new Player();
-	m_font = new Font("./font/consolas.ttf", 32);
 
-	m_audio = new Audio("./audio/powerup.wav");
+	m_ship = new Player();
+
+	m_font = new Font("./font/consolas.ttf", 32);
 
 	m_cameraX = 0;
 	m_cameraY = 0;
@@ -31,41 +31,16 @@ bool Application2D::startup()
 
 void Application2D::shutdown() 
 {
-	delete m_audio;
+
 	delete m_font;
-	delete m_crab;
+	delete m_ship;
 	delete m_2dRenderer;
 }
 
 void Application2D::update(float deltaTime) 
 {
-	//crab->update(deltatime);
 	m_timer += deltaTime;
-
-	// input example
-	Input* input = Input::getInstance();
-
-	// use arrow keys to move camera
-	if (input->isKeyDown(INPUT_KEY_UP))
-		m_cameraY += 500.0f * deltaTime;
-
-	if (input->isKeyDown(INPUT_KEY_DOWN))
-		m_cameraY -= 500.0f * deltaTime;
-
-	if (input->isKeyDown(INPUT_KEY_LEFT))
-		m_cameraX -= 500.0f * deltaTime;
-
-	if (input->isKeyDown(INPUT_KEY_RIGHT))
-		m_cameraX += 500.0f * deltaTime;
-
-	// example of audio
-	if (input->wasKeyPressed(INPUT_KEY_SPACE))
-		m_audio->play();
-
-	// exit the application
-	if (input->isKeyDown(INPUT_KEY_ESCAPE))
-		quit();
-	m_crab->update(deltaTime);
+	m_ship->update(deltaTime);
 }
 
 void Application2D::draw() 
@@ -79,7 +54,7 @@ void Application2D::draw()
 	// begin drawing sprites
 	m_2dRenderer->begin();
 	 
-	m_crab->draw(m_2dRenderer);
+	m_ship->draw(m_2dRenderer);
 	// demonstrate spinning sprite
 
 
