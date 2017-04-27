@@ -30,6 +30,8 @@ protected:
 	Entity* m_parent;
 
 	aie::Texture* m_shipTexture;
+	aie::Texture* m_questIndTexture;
+
 
 	std::vector<Entity*> m_child; 
 

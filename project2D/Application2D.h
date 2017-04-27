@@ -4,6 +4,7 @@
 #include "Renderer2D.h"
 #include "Audio.h"
 #include "Player.h"
+#include "Quest_ind.h"
 
 class Application2D : public aie::Application {
 public:
@@ -24,6 +25,7 @@ protected:
 	aie::Font*			m_font;
 	aie::Audio*			m_audio;
 	Player*				m_ship;
+	Quest_ind*		    m_QstInd;
 	float m_cameraX, m_cameraY;
 	float m_timer;
 };

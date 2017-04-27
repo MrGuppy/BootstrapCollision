@@ -20,7 +20,6 @@ private:
 
 	Vector2 velocity;
 	Vector2 dir;
-	Player* player;
 
 };
 

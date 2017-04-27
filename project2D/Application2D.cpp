@@ -20,6 +20,8 @@ bool Application2D::startup()
 
 	m_ship = new Player();
 
+	m_QstInd = new Quest_ind();
+
 	m_font = new Font("./font/consolas.ttf", 32);
 
 	m_cameraX = 0;
@@ -31,7 +33,7 @@ bool Application2D::startup()
 
 void Application2D::shutdown() 
 {
-
+	delete m_QstInd;
 	delete m_font;
 	delete m_ship;
 	delete m_2dRenderer;
@@ -41,6 +43,7 @@ void Application2D::update(float deltaTime)
 {
 	m_timer += deltaTime;
 	m_ship->update(deltaTime);
+	m_QstInd->update(deltaTime);
 }
 
 void Application2D::draw() 
@@ -53,9 +56,14 @@ void Application2D::draw()
 
 	// begin drawing sprites
 	m_2dRenderer->begin();
-	 
-	m_ship->draw(m_2dRenderer);
-	// demonstrate spinning sprite
+	 m_ship->draw(m_2dRenderer); //can't draw both at once 
+	m_QstInd->draw(m_2dRenderer);
+
+
+
+
+
+
 
 
 

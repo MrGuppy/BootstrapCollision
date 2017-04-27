@@ -8,10 +8,10 @@ using namespace aie;
 Player::Player()
 {
 	m_shipTexture = new Texture("./textures/ship.png");
-	speed = 1000.0f;
+	speed = 1250.0f;
 	rotateSpeed = 2.0f;
-	pullBack = 1.0f;
-	mass = 1.0f;
+	pullBack = 3.0f;
+	mass = 1.50f;
 }
 
 Player::~Player()
@@ -23,7 +23,7 @@ void Player::update(float deltaTime)
 {
 	Input* input = Input::getInstance(); // change cam to player pos
 
-	Vector2 dir = Vector2(0, 0);
+	Vector2 dir;
 	float rotate = 0;
 	float pull = 0;
 
@@ -35,34 +35,18 @@ void Player::update(float deltaTime)
 	if (input->isKeyDown(INPUT_KEY_S))
 	{
 		dir.y = -1;
-
 	}
  
 	if (input->isKeyDown(INPUT_KEY_A))
 	{
-		//dir.x = -1;
 		rotate = rotateSpeed * deltaTime;
-
 	}
 
 	if (input->isKeyDown(INPUT_KEY_D))
 	{
-		//dir.x = 1;
 		rotate = -rotateSpeed * deltaTime;
-
 	}
 
-
-	Matrix3 PlayerPos;
-	//velocity += dir * speed * deltaTime;
-	//Pos += velocity * deltaTime;
-	
-
-	//Drag and Mass????
-	//should mass be a float?
-	//what is dampening?
-	//how do you add drag
-	
 	Vector2 force = dir * speed;
 	Vector2 acceleration = force / mass;
 	Vector2 dampening = -(velocity * pullBack);
@@ -70,6 +54,7 @@ void Player::update(float deltaTime)
 	velocity += (acceleration + dampening) * deltaTime;
 	Vector2 Pos = velocity * deltaTime;
 
+	Matrix3 PlayerPos;
 	PlayerPos.setPos(Pos);
 	m_localMatrix = m_localMatrix * PlayerPos;
 
@@ -77,9 +62,7 @@ void Player::update(float deltaTime)
 	PlayerRotate.setRotateZ(rotate);
 	m_localMatrix = m_localMatrix * PlayerRotate;
 	
-
-
-		updateTransform();
+	updateTransform();
 }
 
 void Player::draw(aie::Renderer2D* m_2dRenderer)
