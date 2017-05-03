@@ -57,7 +57,7 @@ void Application2D::draw()
 	// begin drawing sprites
 	m_2dRenderer->begin();
 	 m_ship->draw(m_2dRenderer); //can't draw both at once 
-	m_QstInd->draw(m_2dRenderer);
+	//m_QstInd->draw(m_2dRenderer);
 
 
 
